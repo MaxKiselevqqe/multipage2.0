@@ -1,0 +1,293 @@
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* также адаптив высчитывает отступы
+звёздочка означает все операторы и классы */
+.section-title{
+margin-bottom: 50px;
+font-size: 48px;
+font-weight: 700;
+text-align: center;
+}
+.header{
+background-color: aliceblue;
+}
+.header-main{
+background-color: transparent;
+position: absolute;
+z-index: 5;
+/* CSS-свойство z-index определяет положение позиционированного элемента и его дочерних элементов или флекс-элементов по оси z. Перекрывающие элементы с большим значением z-index будут накладываться поверх элементов с меньшим z-index. */
+left: 0;
+right: 0; 
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 10px;
+    /* адаптив марджин для того чтобы он от начала страницы дальше */
+}
+body{
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: "Inter Tight", sans-serif;
+}
+.header_inner{
+padding-top: 40px;
+padding-bottom: 45px;
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+}
+
+.menu_li{
+    display:flex;
+    gap: 35px;
+    text-transform: uppercase;
+    color: blueviolet;
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: "Inter Tight", sans-serif;
+    text-decoration: none;
+    
+}
+main{
+    flex-grow: 1;
+}
+.top{
+color:black;
+text-align: center;
+ padding-top:100px;
+ padding-bottom: 40px;
+
+}
+.title{
+    padding-bottom: 40px;
+    font-size: 96px;
+    font-weight: 700;
+}
+
+.toplink{
+    background-color: black;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    /* чтобы работало всё правильно как для блочного тега */
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+}
+.carousel slide{
+    box-sizing: content-box;
+  }
+  
+  .carousel{ 
+   position: fixed; 
+   top: 20%; 
+   left: 20%; 
+  } 
+   
+  .car_gen_2{ 
+   position: fixed; 
+   top: 20%; 
+   left: 60%; 
+  } 
+  
+.drums{
+    padding: 150px;
+}
+.drums-list{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 40px;
+text-align: center;
+}
+.drums-img{
+    margin-bottom: 30px;
+
+}
+.drums-title{
+    margin-bottom: 30px;
+    font-size: 34px;
+    font-weight: 700;
+
+}
+.drums-text{
+    text-align: left;
+}
+.how-works{
+    padding-bottom: 150px;
+}
+.how-works-inner{
+    min-width: 600px;
+     margin: 0 auto;
+}
+.how-works-title{
+    font-size:24px;
+    font-weight: 700;
+    padding-top: 50px;
+}
+.how-works-list{
+    padding: 50px 0 70px;
+    counter-reset: counter;
+    
+}
+.how-works-item{
+    list-style-type: none;
+    /* убираем лишние нумерации в списке */
+    width: 270px;
+}
+.stats{
+    display:grid;
+    grid-template-columns: repeat(4,fr1);
+}
+
+.how-works-item::before{
+    counter-increment: counter;
+    content: counter(counter);
+     /* делаем цифры активными чтобы к ним обращаться */
+   display: flex;
+   background-color: blueviolet;
+   font-size:48px;
+   font-weight: 700;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   color:white;
+   justify-content: center;
+   align-items:center;
+}
+.buy{
+padding: 100px 0 150px;
+
+}
+buy-title{
+    margin-bottom: 20px;
+}
+.buy-text{
+text-align: center;
+font-weight: 700;
+font-size: 24px;
+margin-bottom: 50px;
+padding: 0 100px;
+}
+form{
+    min-width: 580px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* растянули */
+    flex-wrap: wrap;
+}
+.form-input{
+    width: 270px;
+    padding: 18px 20px;
+    display: inline-block;
+    border: 1px solid blueviolet;
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 400px;
+    font-family: "Inter Tight", sans-serif;
+
+}
+.form-input::placeholder{
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: "Inter Tight", sans-serif;
+    line-height: 1.3;
+    opacity: 0.5;
+}
+
+.form-textarea{
+    width: 100%;
+    resize:none ;
+    /* фиксированный размер */
+    padding: 28px 20px;
+    height: 290px;
+    border: 1px solid blueviolet;
+    margin-bottom: 50px;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 400px;
+    font-family: "Inter Tight", sans-serif;
+
+}
+.form-textarea::placeholder{
+    /* обращаемся к плейсхолдеру с помощью :: */
+    font-size: 16px;
+    font-weight: 400px;
+    font-family: "Inter Tight", sans-serif;
+    line-height: 1.3;
+    opacity: 0.5;
+    
+}
+.form-btn{
+    text-transform: uppercase;
+    color:black;
+    background-color: lightpink;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 400px;
+    font-family: "Inter Tight", sans-serif;
+    padding: 13px 61px;
+    margin: 0auto;
+}
+.card-img{
+    max-width: 200px;
+    margin-bottom: 20px;
+    max-height: 300px;
+}
+.choose-product{
+    padding: 100px 0 150px;
+}
+
+.tabs-items{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 100px 40px;
+
+}
+.tabs-card{
+    text-align: center;
+    border: solid 2px;
+    border-radius: 10px;
+    border-color: blueviolet;
+    
+}
+.card-title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding: 0 5px;
+
+}
+.card-price{
+    padding: 0 5px;
+    margin-bottom: 20px;
+}
+.card-buy{
+    padding: 0 5px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font: size 24px;
+
+}
