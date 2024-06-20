@@ -24,7 +24,7 @@ text-align: center;
 background-color: aliceblue;
 }
 .header-main{
-background-color: transparent;
+background-color:aliceblue;
 position: absolute;
 z-index: 5;
 /* CSS-свойство z-index определяет положение позиционированного элемента и его дочерних элементов или флекс-элементов по оси z. Перекрывающие элементы с большим значением z-index будут накладываться поверх элементов с меньшим z-index. */
@@ -95,21 +95,20 @@ text-align: center;
     font-size: 36px;
     font-weight: 700;
 }
-.carousel slide{
-    box-sizing: content-box;
-  }
-  
-  .carousel{ 
-   position: fixed; 
-   top: 20%; 
-   left: 20%; 
-  } 
-   
-  .car_gen_2{ 
-   position: fixed; 
-   top: 20%; 
-   left: 60%; 
-  } 
+
+
+.carousel-inner{
+	border: 2px blueviolet ;
+	border-radius: 10px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+}
+.carousel-inner img {
+  height: 700px; 
+ align-items: center;
+}
+
   
 .drums{
     padding: 150px;
@@ -289,5 +288,10 @@ form{
     margin-bottom: 20px;
     font-weight: 700;
     font: size 24px;
+
+}
+.top-vid{
+    width: 806px;
+    margin: 0auto;
 
 }
